@@ -14,7 +14,7 @@ var addContainer = function( ariaLive ) {
 	container.id = "a11y-speak-" + ariaLive;
 	container.className = "a11y-speak-region";
 
-	var screenReaderTextStyle = "clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden; word-wrap: normal;";
+	var screenReaderTextStyle = "clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); position: absolute; width: 1px; height: 1px; overflow: hidden; border: 0; margin: -1px; padding: 0; word-wrap: normal !important;";
 	container.setAttribute( "style", screenReaderTextStyle );
 
 	container.setAttribute( "aria-live", ariaLive );
